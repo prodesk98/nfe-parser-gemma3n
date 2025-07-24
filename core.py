@@ -56,5 +56,4 @@ async def parse_NFe(image: bytes) -> NFe:
             },
         ],
     )
-    result = await llm_with_structure.ainvoke([message])
-    return result
+    return await llm_with_structure.ainvoke([message])
