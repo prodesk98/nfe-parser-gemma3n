@@ -1,6 +1,6 @@
 from typing import Annotated
 from fastapi import FastAPI, File
-from core import parse_nfe
+from core import parse_NFe
 from schemas import NFe
 
 app = FastAPI(
@@ -16,4 +16,4 @@ async def parse(image: Annotated[bytes, File()]) -> NFe:
     :param image:
     :return:
     """
-    return await parse_nfe(image)
+    return await parse_NFe(image)
